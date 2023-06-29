@@ -23,7 +23,7 @@
                         <th>Category Name</th>
                         <th>Image</th>
                         <th>Status</th>
-                        <th>Edit</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
