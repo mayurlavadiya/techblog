@@ -20,30 +20,32 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Category Name</th>
+                        <th>Category</th>
+                        <th>Post Name</th>
                         <th>Image</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
-                {{-- <tbody>
-                    @foreach ($category as $item)                        
+                <tbody>
+                    @foreach ($posts as $item)                        
                     <tr>
                         <td>{{$item->id}}</td>
+                        <td>{{$item->category->name }}</td>
                         <td>{{$item->name}}</td>
                         <td>
-                            <img src="{{asset('upload/category/'.$item->image)}}" width="100px" height="70px" alt="cimage">
+                            <img src="{{asset('upload/post/'.$item->image)}}" width="100px" height="70px" alt="cimage">
                         </td>
                         <td style="color: {{$item->status == '1' ? 'green' : 'red'}}; font-weight: bold;">
                             {{$item->status == '1' ? 'Active':'Inctive'}}
                         </td>
                         <td>
-                            <a href="{{url('admin/edit-category/'.$item->id)}}" class="btn btn-success">Edit</a>
-                            <a href="{{url('admin/delete-category/'.$item->id)}}" class="btn btn-danger">Delete</a>
+                            <a href="{{url('admin/edit-post/'.$item->id)}}" class="btn btn-success">Edit</a>
+                            <a href="{{url('admin/delete-post/'.$item->id)}}" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                     @endforeach
-                </tbody> --}}
+                </tbody>
             </table>
         </div>
     </div>

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('slug');
             $table->mediumText('description');
 
-            $table->string('yt_iframe'); // video link
+            $table->string('image'); // video link
             
             $table->string('meta_title');
             $table->mediumText('meta_description');

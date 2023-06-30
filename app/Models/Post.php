@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+use App\Models\Category;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -15,11 +16,16 @@ class Post extends Model
         'name',
         'slug',
         'description',
-        'yt_iframe',
+        'image',
         'meta_title',
         'meta_description',
-        'meta_keyword',       
+        'meta_keyword',
         'status',
         'created_by'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
 }
