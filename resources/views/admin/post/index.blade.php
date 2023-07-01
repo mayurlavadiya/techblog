@@ -22,6 +22,7 @@
                         <th>ID</th>
                         <th>Category</th>
                         <th>Post Name</th>
+                        <th>Description</th>
                         <th>Image</th>
                         <th>Status</th>
                         <th>Action</th>
@@ -33,6 +34,7 @@
                         <td>{{$item->id}}</td>
                         <td>{{$item->category->name }}</td>
                         <td>{{$item->name}}</td>
+                        <td>{{$item->description}}</td> 
                         <td>
                             <img src="{{asset('upload/post/'.$item->image)}}" width="100px" height="70px" alt="cimage">
                         </td>

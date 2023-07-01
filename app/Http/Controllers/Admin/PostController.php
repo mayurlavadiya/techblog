@@ -57,13 +57,40 @@ class PostController extends Controller
         return view('admin.post.edit', compact('post','category'));
     }
 
-    public function update()
+    public function update(PostFormRequest $request, $post_id)
     {
-        return view('admin.post.create');
-        
+        $data = $request->validated();
+        $post = Post::find($post_id);
+
+        $post->category_id = $data['category_id'];
+        $post->name = $data['name'];
+        $post->slug = $data['slug'];
+        $post->description = $data['description'];
+
+        if ($request->hasfile('image')) {
+
+            $destination = 'upload/post/'.$post->image;
+            if(File::exists($destination)){
+                File::delete($destination);
+            }
+
+            $file = $request->file('image');
+            $filename = time() . '.' . $file->getclientOriginalExtension();
+            $file->move('upload/post/', $filename);
+            $post->image = $filename;
+        }
+
+        $post->meta_title = $data['meta_title'];
+        $post->meta_description = $data['meta_description'];
+        $post->meta_keyword = $data['meta_keyword'];
+        $post->status = $request->status == true ? '1':'0';
+        $post->created_by = Auth::user()->id;
+        $post->update();
+
+        return redirect('admin/posts')->with('message', 'Post Updated Successfully..');        
     }
 
-    public function delete($category_id){
+    public function delete($post_id){
         $posts = Post::findOrFail($post_id);
         if($posts){
              $destination = 'upload/post/'.$posts->image;
@@ -71,10 +98,10 @@ class PostController extends Controller
                 File::delete($destination);
             }
             $posts->delete();
-            return redirect('admin/post')->with('message', 'Post Deleted Successfully..');
+            return redirect('admin/posts')->with('message', 'Post Deleted Successfully..');
         }
         else{
-            return redirect('admin/post')->with('message', 'No Post ID Found..');
+            return redirect('admin/posts')->with('message', 'No Post ID Found..');
         }
     }
 }

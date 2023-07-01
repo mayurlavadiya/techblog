@@ -29,7 +29,7 @@
 
                 <div class="mb-3">
                     <b><label for="">Select Category</label></b>
-                    <select name="category_id" class="form-control" id="category">
+                    <select name="category_id" class="form-control">
                         <option value="">-- Select Category --</option>
                         @foreach ($category as $cateitem)                             
                             <option value="{{$cateitem->id}}" {{$post->category_id == $cateitem->id ? 'selected':''}}>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="mb-3">
                     <b><label for="">Description</label></b>
-                    <textarea name="description" class="form-control">{{$post->description}}</textarea>
+                    <textarea name="description" id="mySummernote" class="form-control">{!!$post->description!!}</textarea>
                 </div>
                 <div class="mb-3">
                     <b><label for="">Image</label></b>
@@ -64,11 +64,11 @@
                 </div>
                 <div class="mb-3">
                     <b><label for="">Meta Description</label></b>
-                    <textarea name="meta_description" class="form-control" >{{$post->meta_description}}</textarea>
+                    <textarea name="meta_description" class="form-control" >{!!$post->meta_description!!}</textarea>
                 </div>
                 <div class="mb-3">
                     <b><label for="">Meta Keywords</label></b>
-                    <textarea name="meta_keyword" class="form-control" >{{$post->meta_keyword}}</textarea>
+                    <textarea name="meta_keyword" class="form-control" >{!!$post->meta_keyword!!}</textarea>
                 </div>
 
                 <h6>STATUS MODE</h6>
