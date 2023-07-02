@@ -27,7 +27,8 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     Route::put('update-post/{post_id}',[\App\Http\Controllers\Admin\PostController::class,'update'])->name('admin.update-post');
     Route::get('delete-post/{post_id}',[\App\Http\Controllers\Admin\PostController::class,'delete'])->name('admin.delete-post');
 
-    Route::get('users',[\App\Http\Controllers\Admin\UserController::class,'index'])->name('admin.user');
+    Route::get('users',[\App\Http\Controllers\Admin\UserController::class,'index'])->name('admin.users.index');
     Route::get('users/edit/{user_id}',[\App\Http\Controllers\Admin\UserController::class,'edit'])->name('admin.edit-users');
+    Route::put('users/update/{user_id}', [\App\Http\Controllers\Admin\UserController::class, 'update'])->name('admin.update-user');
 
 });

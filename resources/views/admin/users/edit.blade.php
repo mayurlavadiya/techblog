@@ -23,7 +23,7 @@
             </div> 
             @endif
 
-            <form action="{{url('admin/update-user/'.$user->id)}}" method="POST" enctype="multipart/form-data">
+            <form action="{{url('admin/users/update/'.$user->id)}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
              
@@ -39,7 +39,7 @@
 
                 <div class="mb-3">
                     <b><label for="">Role As</label></b>
-                    <select name="" id="" class="form-control">  
+                    <select name="role_as" id="" class="form-control">  
                         <option value="1" {{$user->role_as == '1' ? 'selected':''}}>Admin</option>
                         <option value="0" {{$user->role_as == '0' ? 'selected':''}}>User</option>
                         <option value="2" {{$user->role_as == '2' ? 'selected':''}}>Blogger</option>

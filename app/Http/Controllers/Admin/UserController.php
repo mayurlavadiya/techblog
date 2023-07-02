@@ -20,21 +20,25 @@ class UserController extends Controller
     }
 
     public function update(Request $request, $user_id)
-    {
-        $data = $request->validated();
-        $user = User::find($user_id);
+{
+    $user = User::findOrFail($user_id);
 
-        $user->id = $data['id'];
-        $user->name = $data['name'];
-        $user->email = $data['email'];
-        $user->description = $data['description'];
-        $user->created_at = $data['created_at'];
-        $user->status = $request->status == true ? '1':'0';
-        $user->created_by = Auth::user()->id;
-        $user->update();
+    $request->validate([
+        'name' => 'required',
+        'email' => 'required|email',
+        // 'role_as' => 'required|in:0,1,2',
+    ]);
 
-        return redirect('admin/posts')->with('message', 'Post Updated Successfully..');        
-    }
+    $user->name = $request->name;
+    $user->email = $request->email;
+    $user->role_as = $request->role_as;
+    $user->status = $request->status == true ? '1':'0';
+
+    $user->update();
+
+    return redirect()->route('admin.users.index')->with('message', 'User updated successfully.');
+}
+
 
 
 }
