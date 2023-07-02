@@ -16,13 +16,13 @@
             @if(session('message'))
             <div class="alert alert-success">{{session('message')}}</div>
         @endif
-            <table class="table table-bordered">
+            <table id="myDatatable" class="row-border" style="width:100%">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Category</th>
-                        <th>Post Name</th>
-                        <th>Description</th>
+                        <th style="width:20%">Post Name</th>
+                        <th style="width:20%">Description</th>
                         <th>Image</th>
                         <th>Status</th>
                         <th>Action</th>

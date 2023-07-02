@@ -32,7 +32,7 @@ class UserController extends Controller
     $user->name = $request->name;
     $user->email = $request->email;
     $user->role_as = $request->role_as;
-    $user->status = $request->status == true ? '1':'0';
+    // $user->status = $request->status == true ? '1':'0';
 
     $user->update();
 

@@ -23,7 +23,7 @@
             </div> 
             @endif
 
-            <form action="{{url('admin/users/update/'.$user->id)}}" method="POST" enctype="multipart/form-data">
+            <form action="{{url('admin/update-user/'.$user->id)}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
              
