@@ -21,7 +21,14 @@
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
-  
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css"></li>
+
+    <style>
+        .dataTables_wrapper .dataTables_paginate .paginate_button{
+            padding: 0px !important;
+            margin: 10px !important;
+        }
+    </style>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>

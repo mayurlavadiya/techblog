@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -29,7 +30,7 @@ class CategoryController extends Controller
         $category = new Category; // model category 
 
         $category->name = $data['name'];
-        $category->slug = $data['slug'];
+        $category->slug = Str::slug($data['slug']);
         $category->description = $data['description'];
 
         if ($request->hasfile('image')) {
@@ -63,7 +64,7 @@ class CategoryController extends Controller
         $category = Category::find($category_id); // model category 
 
         $category->name = $data['name'];
-        $category->slug = $data['slug'];
+        $category->slug = Str::slug($data['slug']);
         $category->description = $data['description'];
 
         if ($request->hasfile('image')) {

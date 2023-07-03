@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -30,7 +31,7 @@ class PostController extends Controller
 
         $post->category_id = $data['category_id'];
         $post->name = $data['name'];
-        $post->slug = $data['slug'];
+        $post->slug = Str::slug($data['slug']);
         $post->description = $data['description'];
 
         if ($request->hasfile('image')) {
@@ -64,7 +65,7 @@ class PostController extends Controller
 
         $post->category_id = $data['category_id'];
         $post->name = $data['name'];
-        $post->slug = $data['slug'];
+        $post->slug = Str::slug($data['slug']);
         $post->description = $data['description'];
 
         if ($request->hasfile('image')) {
