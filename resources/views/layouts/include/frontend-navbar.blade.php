@@ -24,7 +24,7 @@
           @endphp
           @foreach ($categories as $cateitem)          
           <li class="nav-item">
-            <a class="dropdown-item" href="{{url("$cateitem->slug")}}">{{$cateitem->name}}</a>
+            <a class="dropdown-item" href="{{url('categories/'.$cateitem->slug)}}">{{$cateitem->name}}</a>
           </li>
           @endforeach
         </ul>
