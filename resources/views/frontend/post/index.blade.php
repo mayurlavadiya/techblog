@@ -25,7 +25,7 @@
 
                     </div>
                 </div>
-                <div class="your-paginate">
+                <div class="your-paginate mt-4">
                     {{$post->links()}}
                 </div>
 
