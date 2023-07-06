@@ -53,7 +53,7 @@
               <li><a class="dropdown-item" href="#!">Settings</a></li>
               <li><a class="dropdown-item" href="#!">Activity Log</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href={{'logout'}}>Logout</a></li>
+              <li><a class="dropdown-item" href="{{url('/')}}">Logout</a></li>
           </ul>
       </li>
   </ul>

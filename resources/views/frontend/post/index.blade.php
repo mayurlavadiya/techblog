@@ -16,7 +16,17 @@
                         <a style="text-decoration: none" href="{{ url('categories/'. $category->slug .'/'. $postitem->slug) }}">
                             <h2 class="post-heading">{{$postitem->name}}</h2>
                         </a>
+
+                        <h6>
+                            <b>Posted on:</b> {{$postitem->created_at->format('d-m-Y')}}
+                            <span class="ms-5"><b>Posted by:</b> {{$postitem->user->name}}</span>
+                        </h6>
+
+
                     </div>
+                </div>
+                <div class="your-paginate">
+                    {{$post->links()}}
                 </div>
 
                 @empty
