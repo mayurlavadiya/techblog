@@ -12,6 +12,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/',[App\Http\Controllers\Frontend\FrontendController::class, 'index'])->name('frontend.home');
+Route::get('/logout',[App\Http\Controllers\Frontend\FrontendController::class, 'logout'])->name('frontend.logout');
+
 Route::get('categories/{category_slug}',[App\Http\Controllers\Frontend\FrontendController::class, 'viewCategoryPost']);
 
 Route::get('categories/{category_slug}/{post_slug}',[App\Http\Controllers\Frontend\FrontendController::class, 'viewPost']);

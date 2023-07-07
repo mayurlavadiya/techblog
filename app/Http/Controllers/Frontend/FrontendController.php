@@ -6,11 +6,13 @@ use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class FrontendController extends Controller
 {
     public function index(){
-        return view('frontend.index');
+        $posts = Post::all(); 
+        return view('frontend.index',compact('posts'));
     }
 
     // view fronted category page
@@ -41,5 +43,12 @@ class FrontendController extends Controller
         {
         return redirect('/');            
         }        
+    }
+
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/');
     }
 }
