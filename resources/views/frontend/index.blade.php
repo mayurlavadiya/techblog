@@ -41,6 +41,9 @@
                             <p class="m-0">Shares: {{ $post->shares }}</p>
                         </div>
                     </div>
+                    <div>
+                    <h5>WELCOME TO THE THECKBLO FRONTED</h5>
+                    </div>
                 </div>
             </div>
         @endforeach
