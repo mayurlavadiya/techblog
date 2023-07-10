@@ -23,6 +23,7 @@
                         <th>Category Name</th>
                         <th>Image</th>
                         <th>Status</th>
+                        <th>Navbar Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -36,6 +37,9 @@
                         </td>
                         <td style="color: {{$item->status == '1' ? 'green' : 'red'}}; font-weight: bold;">
                             {{$item->status == '1' ? 'Active':'Inctive'}}
+                        </td>
+                        <td style="color: {{$item->navbar_status == '1' ? 'green' : 'red'}}; font-weight: bold;">
+                            {{$item->navbar_status == '1' ? 'Active':'Inctive'}}
                         </td>
                         <td>
                             <a href="{{url('admin/edit-category/'.$item->id)}}" class="btn btn-success">Edit</a>

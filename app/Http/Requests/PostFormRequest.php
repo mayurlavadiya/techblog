@@ -29,7 +29,7 @@ class PostFormRequest extends FormRequest
             'name' => [
                 'required',
                 'string',
-                'max:200'
+                'max:2000'
             ],
             'slug' => [
                 'required',

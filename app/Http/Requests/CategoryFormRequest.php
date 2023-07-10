@@ -25,12 +25,12 @@ class CategoryFormRequest extends FormRequest
             'name' => [
                 'required',
                 'string',
-                'max:200'
+                'max:2000'
             ],
             'slug' => [
                 'required',
                 'string',
-                'max:200'
+                'max:2000'
             ],
             'description' => [
                 'required'

@@ -5,7 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">
+                    <h2>{{ __('Login Page') }}</h2>               
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -62,6 +64,11 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+
+                                @if (Route::has('register'))
+                                <p class="mt-3 float-end" style="color: red;">If not registered, <a href="{{ route('register') }}">please register</a>.</p>
+                            @endif
+                                
                             </div>
                         </div>
                     </form>

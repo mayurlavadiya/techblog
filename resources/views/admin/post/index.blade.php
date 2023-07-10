@@ -20,7 +20,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Category</th>
+                        <th style="width:10%">Category</th>
                         <th style="width:20%">Post Name</th>
                         <th style="width:20%">Description</th>
                         <th>Image</th>

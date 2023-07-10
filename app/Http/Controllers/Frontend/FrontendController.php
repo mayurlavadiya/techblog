@@ -45,6 +45,20 @@ class FrontendController extends Controller
         }        
     }
 
+    public function show($id)
+    {
+        // Check if the user is authenticated
+        if (auth()->check()) {
+            // User is logged in, retrieve the post
+            $post = Post::findOrFail($id);
+
+            // Return the view with the post data
+            return view('post.show', compact('post'));
+        }
+
+        // User is not logged in, redirect to login page
+        return redirect()->route('login')->with('error', 'Please log in to view the post details.');
+    }
 
     public function logout()
     {

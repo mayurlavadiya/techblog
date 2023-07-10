@@ -15,6 +15,7 @@ Route::get('/',[App\Http\Controllers\Frontend\FrontendController::class, 'index'
 Route::get('/logout',[App\Http\Controllers\Frontend\FrontendController::class, 'logout'])->name('frontend.logout');
 
 Route::get('categories/{category_slug}',[App\Http\Controllers\Frontend\FrontendController::class, 'viewCategoryPost']);
+Route::get('/post/{id}',[App\Http\Controllers\Frontend\FrontendController::class, 'show']);
 
 Route::get('categories/{category_slug}/{post_slug}',[App\Http\Controllers\Frontend\FrontendController::class, 'viewPost']);
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){

@@ -6,6 +6,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <a class="btn btn-primary mb-4" href="{{ url()->previous() }}">Back</a>
+
                 <div class="category-heading">
                     <h3><b>Category :</b> &nbsp;{{$category->name}}</h3>
                 </div>
@@ -19,10 +21,8 @@
 
                         <h6>
                             <b>Posted on:</b> {{$postitem->created_at->format('d-m-Y')}}
-                            <span class="ms-5"><b>Posted by:</b> {{$postitem->user->name}}</span>
+                            <span class="ms-5"><b>Posted by:</b> {{$postitem->user?->name}}</span>
                         </h6>
-
-
                     </div>
                 </div>
                 <div class="your-paginate mt-4">
