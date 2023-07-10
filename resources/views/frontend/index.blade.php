@@ -45,6 +45,9 @@
                             </div>
                         </a>
                     </div>
+                    <div>
+                    <h5>WELCOME TO THE THECKBLO FRONTED</h5>
+                    </div>
                 </div>
             @endif
         @endforeach
