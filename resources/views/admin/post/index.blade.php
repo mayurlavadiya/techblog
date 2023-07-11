@@ -33,7 +33,12 @@
                     <tr>
                         <td>{{$item->id}}</td>
                         <td>{{$item->category->name}}</td>
-                        <td>{{$item->name}}</td>
+                        {{-- <td>{{$item->name}}</td> --}}
+                        <td>
+                            <a style="text-decoration: none" href="{{ url('categories/'. $item->category->slug .'/'. $item->slug) }}">
+                                {{$item->name}}
+                            </a>
+                        </td>
                         <td>{{$item->description}}</td> 
                         <td>
                             <img src="{{asset('upload/post/'.$item->image)}}" width="100px" height="70px" alt="cimage">

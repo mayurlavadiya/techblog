@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Frontend\FrontendController;
+
 
 // Route::get('/', function () {
 //     return view('auth.login');
@@ -16,6 +18,12 @@ Route::get('/logout',[App\Http\Controllers\Frontend\FrontendController::class, '
 
 Route::get('categories/{category_slug}',[App\Http\Controllers\Frontend\FrontendController::class, 'viewCategoryPost']);
 Route::get('/post/{id}',[App\Http\Controllers\Frontend\FrontendController::class, 'show']);
+
+
+Route::get('/navbar_pages/articles', [FrontendController::class, 'articles'])->name('navbar_pages.articles');
+Route::get('/navbar_pages/blog', [FrontendController::class, 'blog'])->name('navbar_pages.blog');
+Route::get('/navbar_pages/contactus', [FrontendController::class, 'contactus'])->name('navbar_pages.contactus');
+Route::get('/navbar_pages/aboutus', [FrontendController::class, 'aboutus'])->name('navbar_pages.aboutus');
 
 Route::get('categories/{category_slug}/{post_slug}',[App\Http\Controllers\Frontend\FrontendController::class, 'viewPost']);
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
@@ -39,3 +47,4 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     Route::put('update-user/{user_id}', [\App\Http\Controllers\Admin\UserController::class, 'update'])->name('admin.update-user');
 
 });
+

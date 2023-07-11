@@ -60,6 +60,27 @@ class FrontendController extends Controller
         return redirect()->route('login')->with('error', 'Please log in to view the post details.');
     }
 
+    public function articles()
+    {
+        return view('frontend.navbar_pages.articles');
+    }
+
+    public function blog()
+    {
+        $posts = Post::where('status', '1')->get();
+        return view('frontend.navbar_pages.blog', compact('posts'));
+    }
+
+    public function contactus()
+    {
+        return view('frontend.navbar_pages.contactus');
+    }
+
+    public function aboutus()
+    {
+        return view('frontend.navbar_pages.aboutus');
+    }
+
     public function logout()
     {
         Auth::logout();

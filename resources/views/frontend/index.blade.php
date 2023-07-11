@@ -46,7 +46,7 @@
                         </a>
                     </div>
                     <div>
-                    <h5>WELCOME TO THE THECKBLO FRONTED</h5>
+                    
                     </div>
                 </div>
             @endif
@@ -54,5 +54,6 @@
     </div>
 </div>
 
-@include('')
+
+@include('layouts.include.fronted-footer')
 @endsection

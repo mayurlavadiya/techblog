@@ -11,8 +11,9 @@
       </li>
      
       <li class="nav-item">
-        <a class="nav-link" href="#">Articles</a>
-      </li>
+        <a class="nav-link" href="{{url('navbar_pages/articles')}}">Articles</a>
+    </li>
+    
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -31,15 +32,15 @@
       </li>
       
           <li class="nav-item">
-        <a class="nav-link" href="#">Blogs</a>
+        <a class="nav-link" href="{{url('navbar_pages/blog')}}">Blogs</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
+        <a class="nav-link" href="{{url('navbar_pages/aboutus')}}">About Us</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact Us</a>
+        <a class="nav-link" href="{{url('navbar_pages/contactus')}}">Contact Us</a>
       </li>
 
     </ul>

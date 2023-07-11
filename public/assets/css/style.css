@@ -11244,3 +11244,15 @@ body {
   font-size: 0.75rem;
   border-radius: 0.375rem !important;
 }
+
+.svg-inline--fa {
+  display: var(--fa-display,inline-block);
+  height: 1.5em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+
+.social-media-links{
+  gap: 10px;
+  display: flex;
+}
