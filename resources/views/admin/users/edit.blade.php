@@ -29,7 +29,7 @@
              
                 <div class="mb-3">
                     <b><label for="">Full Name</label></b>
-                    <input type="text" name="name" class="form-control" value={{$user->name}}>
+                    <input type="text" name="name" class="form-control" value="{{$user->name}}"/>
                 </div>
 
                 <div class="mb-3">

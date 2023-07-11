@@ -10,11 +10,6 @@
         <a class="nav-link active" aria-current="page" href="{{url('/')}}">Home</a>
       </li>
      
-      <li class="nav-item">
-        <a class="nav-link" href="{{url('navbar_pages/articles')}}">Articles</a>
-    </li>
-    
-
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Categories
