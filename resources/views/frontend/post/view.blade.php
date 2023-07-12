@@ -9,7 +9,7 @@
         <div class="py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-8">
                         <a class="btn btn-primary mb-4" href="{{ url()->previous() }}">Back</a>
                         <div class="category-heading">
                             <h3 style="font-weight:bold;">Title : {!! $post->name !!}</h3>
@@ -30,11 +30,25 @@
                                 <div class="mt-3">
                                     <img src="{{ asset('upload/post/' . $post->image) }}" width="50%" height="50%"
                                         alt="cimage">
-                                </div>
+                                </div>                                
+                            </div>                            
+                        </div>
+                    </div>
 
-                                
+                    <div class="col-md-4">
+                        <div class="card" style="margin-top: 4rem !important">
+                            <div class="card-header">
+                                <h4>Latest Posts</h4>
                             </div>
-                            
+                            <div class="card-body">
+                                
+                                @foreach ($latest_post  as $latest_post_item)
+                                    
+                                <a href="{{url('categories/'.$latest_post_item->category->slug.'/'. $latest_post_item->slug)}}" class="text-decoration-none">
+                                    <h6> > {{$latest_post_item->name}}</h6>
+                                </a>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                 </div>

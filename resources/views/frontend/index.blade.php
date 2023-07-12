@@ -1,6 +1,7 @@
 @section('title', 'Techblog - Home')
 @extends('layouts.app')
 
+
 @section('content')
 
 <style>
@@ -22,7 +23,7 @@
     }
 </style>
 
-<div class="container">
+{{-- <div class="container">
     <h2 class="card-title">Blog Posts</h2>
     <hr>
     <div class="row">
@@ -52,8 +53,24 @@
             @endif
         @endforeach
     </div>
-</div>
+</div> --}}
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="owl-carousel category-carousel owl-theme">
+                <div class="item">
+                    <div class="card">
+                        <img src="" alt="image">
+                        <div class="card-body">
+                            <h4>Category Name</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @include('layouts.include.fronted-footer')
 @endsection
