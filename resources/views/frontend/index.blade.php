@@ -6,14 +6,17 @@
 
 <style>
    .blog-image {
-    width: 100%;
-    height: 200px;
+    width: 70px; 
+    height: 185px;
     object-fit: cover;
     object-position: center;
 }
     .card:hover {
         transform: translateY(-5px);
         box-shadow: 0 4px 6px rgba(143, 24, 24, 0.1);
+    }
+    .card-body{
+        margin-bottom: 25px;
     }
     
     @media (max-width: 767px) {
@@ -55,18 +58,22 @@
     </div>
 </div> --}}
 
-<div class="container">
+<div class="container mt-4">
     <div class="row">
         <div class="col-md-12">
             <div class="owl-carousel category-carousel owl-theme">
+                @foreach ($all_categories as $all_cat_item)
+                    
                 <div class="item">
                     <div class="card">
-                        <img src="" alt="image">
+                        <img src="{{ asset('upload/category/' . $all_cat_item->image) }}" width="70%" class="card-img-top blog-image" alt="Post Image">
                         <div class="card-body">
-                            <h4>Category Name</h4>
+                            <h4>{{$all_cat_item->name}}</h4>
                         </div>
                     </div>
                 </div>
+                @endforeach
+
             </div>
         </div>
     </div>

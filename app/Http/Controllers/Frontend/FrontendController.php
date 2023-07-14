@@ -12,7 +12,8 @@ class FrontendController extends Controller
 {
     public function index(){
         $posts = Post::all(); 
-        return view('frontend.index',compact('posts'));
+        $all_categories = Category::where('status','1')->get();
+        return view('frontend.index',compact('posts', 'all_categories'));
     }
 
     // view fronted category page
