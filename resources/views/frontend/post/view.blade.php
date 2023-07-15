@@ -78,6 +78,7 @@
             </div>
         </div>
     @endauth
+    @include('layouts.include.fronted-footer')
 
 @endsection
 

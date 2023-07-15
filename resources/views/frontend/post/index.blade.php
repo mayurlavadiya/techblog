@@ -48,5 +48,6 @@
 </div>
 
 
+@include('layouts.include.fronted-footer')
 
 @endsection
