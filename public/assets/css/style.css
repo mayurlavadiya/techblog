@@ -11262,6 +11262,15 @@ body {
   display: flex;
 }
 
+.social-media-links a {
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.social-media-links a:hover {
+  color: var(--bs-red)
+}
+
 footer {
   position: relative;
   bottom: 0;

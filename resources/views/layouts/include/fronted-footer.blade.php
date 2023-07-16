@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 <div class="py-5 bg-dark text-white">
     <div class="container">
         <div class="row">
@@ -41,12 +43,11 @@
         </div>
     </div>
 </div>
-{{-- <div class="py-2"> --}}
+
 <div class="container-fluid py-2 bg-dark text-center text-white">
     <p class="mb-3">
         &copy; Copyrights at <a href="#" class="text-danger">TechBlog.</a>
-        All right reserved.
-        Design adn Developed by : <a href="https://mayurlavadiya.dorik.io/" class="text-danger">Mayur Lavadiya</a>
+        All rights reserved.
+        Designed and Developed by: <a href="https://mayurlavadiya.dorik.io/" class="text-danger">Mayur Lavadiya</a>
     </p>
-</div>
 </div>

@@ -92,15 +92,18 @@ class CategoryController extends Controller
         return redirect('admin/category')->with('message', 'Category Updated Successfully..');
     }
     
-    public function delete($category_id){
-        $category = Category::findOrFail($category_id);
+    public function delete(Request $request)
+    {
+        $category = Category::findOrFail($request->category_delete_id);
+    
         if($category){
              $destination = 'upload/category/'.$category->image;
             if(File::exists($destination)){
                 File::delete($destination);
             }
+            $category->post()->delete();
             $category->delete();
-            return redirect('admin/category')->with('message', 'Category Deleted Successfully..');
+            return redirect('admin/category')->with('message', 'Category Deleted with its Posts Successfully..');
         }
         else{
             return redirect('admin/category')->with('message', 'No Category ID Found..');

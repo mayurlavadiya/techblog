@@ -24,7 +24,7 @@ Route::get('/navbar_pages/articles', [FrontendController::class, 'articles'])->n
 Route::get('/navbar_pages/blog', [FrontendController::class, 'blog'])->name('navbar_pages.blog');
 Route::get('/navbar_pages/contactus', [FrontendController::class, 'contactus'])->name('navbar_pages.contactus');
 Route::get('/navbar_pages/aboutus', [FrontendController::class, 'aboutus'])->name('navbar_pages.aboutus');
-Route::get('/navbar_pages/services', [FrontendController::class, 'aboutus'])->name('navbar_pages.services');
+Route::get('/navbar_pages/services', [FrontendController::class, 'services'])->name('navbar_pages.services');
 
 Route::get('categories/{category_slug}/{post_slug}',[App\Http\Controllers\Frontend\FrontendController::class, 'viewPost']);
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
@@ -34,7 +34,8 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     Route::post('add-category',[\App\Http\Controllers\Admin\CategoryController::class,'store'])->name('admin.store-category');
     Route::get('edit-category/{category_id}',[\App\Http\Controllers\Admin\CategoryController::class,'edit'])->name('admin.edit-category');
     Route::put('update-category/{category_id}',[\App\Http\Controllers\Admin\CategoryController::class,'update'])->name('admin.update-category');
-    Route::get('delete-category/{category_id}',[\App\Http\Controllers\Admin\CategoryController::class,'delete'])->name('admin.delete-category');
+    // Route::get('delete-category/{category_id}',[\App\Http\Controllers\Admin\CategoryController::class,'delete'])->name('admin.delete-category');
+    Route::post('delete-category',[\App\Http\Controllers\Admin\CategoryController::class,'delete'])->name('admin.delete-category');
 
     Route::get('/posts',[\App\Http\Controllers\Admin\PostController::class,'index'])->name('admin.posts');
     Route::get('add-post',[\App\Http\Controllers\Admin\PostController::class,'create'])->name('admin.add-post');

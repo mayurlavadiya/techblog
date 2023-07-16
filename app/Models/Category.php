@@ -21,7 +21,11 @@ class Category extends Model
         'meta_keyword',
         'navbar_status',
         'status',
-        'created_by',
-        
+        'created_by',        
     ];
+
+    public function post(){
+        
+        return $this->hasMany(Post::class,'category_id','id');
+    }
 }

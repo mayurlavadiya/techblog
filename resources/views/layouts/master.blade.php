@@ -74,5 +74,10 @@
             $('#myDatatable').DataTable();
         } );
     </script>
+
+    @yield('scripts')
+
+
+
 </body>
 </html> 
