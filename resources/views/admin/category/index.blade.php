@@ -85,11 +85,13 @@
 @section('scripts')
     <script>
         $(document).ready(function() {
-            $('.deleteCategoryBtn').click(function(e) {
+            // $('.deleteCategoryBtn').click(function(e) {
+                $(document).on('click', '.deleteCategoryBtn' function (e) {                    
                 e.preventDefault();
 
                 var category_id = $(this).val();
-                $('#category_id').val(category_id)
+                $('#category_id').val(category_id);
+
                 $('#deletemodal').modal('show');
             });
         });

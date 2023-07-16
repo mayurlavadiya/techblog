@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Admin\DashboardController;
+
 
 
 // Route::get('/', function () {
@@ -12,6 +14,7 @@ use App\Http\Controllers\Frontend\FrontendController;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin/logout', [DashboardController::class, 'logout'])->name('admin.logout');
 
 Route::get('/',[App\Http\Controllers\Frontend\FrontendController::class, 'index'])->name('frontend.home');
 Route::get('/logout',[App\Http\Controllers\Frontend\FrontendController::class, 'logout'])->name('frontend.logout');

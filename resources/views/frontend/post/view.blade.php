@@ -21,7 +21,7 @@
                                     <h5 style="color:crimson; font-weight:bold; text-decoration:underline;">Category Name :</h5>
                                     {{ $post->category->name }}
                                 </div>
-                                <div class="mt-3">
+                                <div class="mt-3 post-description">
                                     <h5 style="color:crimson; font-weight:bold; text-decoration:underline;">Post Description:
                                     </h5>
                                     {!! $post->description !!}

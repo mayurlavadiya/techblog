@@ -3809,6 +3809,7 @@ textarea.form-control-lg {
   gap: 28px;
   color: white;
   margin-bottom: 0;
+  font-size: 1rem;
   list-style: none;
 }
 .navbar-nav .show > .nav-link,
@@ -10966,7 +10967,7 @@ body {
 
 .sb-topnav {
   padding-left: 0;
-  height: 56px;
+  height: 85px;
   z-index: 1039;
 }
 .sb-topnav .navbar-brand {
