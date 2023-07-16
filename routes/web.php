@@ -24,6 +24,7 @@ Route::get('/navbar_pages/articles', [FrontendController::class, 'articles'])->n
 Route::get('/navbar_pages/blog', [FrontendController::class, 'blog'])->name('navbar_pages.blog');
 Route::get('/navbar_pages/contactus', [FrontendController::class, 'contactus'])->name('navbar_pages.contactus');
 Route::get('/navbar_pages/aboutus', [FrontendController::class, 'aboutus'])->name('navbar_pages.aboutus');
+Route::get('/navbar_pages/services', [FrontendController::class, 'aboutus'])->name('navbar_pages.services');
 
 Route::get('categories/{category_slug}/{post_slug}',[App\Http\Controllers\Frontend\FrontendController::class, 'viewPost']);
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){

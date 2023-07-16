@@ -13,7 +13,8 @@ class FrontendController extends Controller
     public function index(){
         $posts = Post::all(); 
         $all_categories = Category::where('status','1')->get();
-        return view('frontend.index',compact('posts', 'all_categories'));
+        $latest_post = Post ::where('status','1')->orderBy('created_at','DESC')->get()->take(5);
+        return view('frontend.index',compact('posts', 'all_categories','latest_post'));
     }
 
     // view fronted category page
@@ -82,6 +83,12 @@ class FrontendController extends Controller
     {
         return view('frontend.navbar_pages.aboutus');
     }
+
+    public function services()
+    {
+        return view('frontend.navbar_pages.services');
+    }
+
 
     public function logout()
     {

@@ -11,10 +11,7 @@
         object-position: center;
     }
 
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 6px rgba(143, 24, 24, 0.1);
-    }
+  
 
     @media (max-width: 767px) {
         .card {
@@ -26,7 +23,7 @@
 <div class="container">
     <h2 class="card-title">Contact Us</h2>
     <hr>
-       <div class="row">
+       <div class="row mt-5 mb-5">
         <div class="col-md-6 offset-md-3">
             <div class="card">
                 <div class="card-body">
