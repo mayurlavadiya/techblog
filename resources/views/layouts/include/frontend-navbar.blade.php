@@ -1,19 +1,22 @@
 <div class="sticky-top">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <div class="container">
+
         <!-- Navbar Brand -->
         <a class="navbar-brand ps-3" href="{{ url('/') }}">
             <img src="{{ asset('assets/images/logo/Techblog (3).svg') }}" width="150px" alt="Techblog Logo">
         </a>
 
         <!-- Navbar Toggler -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button class="navbar-toggler text-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <!-- Navbar Menu -->
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
+            {{-- <ul class="navbar-nav me-auto mb-2 mb-lg-0"> --}}
+                <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
                 </li>
@@ -85,6 +88,7 @@
                     </ul>
                 </li>
             </ul>
+        </div>
         </div>
     </nav>
 </div>

@@ -38,6 +38,8 @@
                 @if (session('message'))
                     <div class="alert alert-success">{{ session('message') }}</div>
                 @endif
+            <div class="table-responsive">
+
                 <table id="myDatatable" class="table table-striped">
                     <thead>
                         <tr>
@@ -76,6 +78,7 @@
                         @endforeach
                     </tbody>
                 </table>
+            </div>
             </div>
         </div>
     </div>

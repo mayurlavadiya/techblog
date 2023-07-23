@@ -30,8 +30,35 @@
                                 <div class="mt-3">
                                     <img src="{{ asset('upload/post/' . $post->image) }}" width="50%" height="50%"
                                         alt="cimage">
-                                </div>                                
-                            </div>                            
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment-area mt-4">
+                            <div class="card card-body">
+                                <h5 style="color:crimson; font-weight:bold;">Leave a comment</h5>
+                                <form action="{{url('comments')}}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="post_slug" value="{{ $post->slug }}">
+                                    <textarea name="cooment_body" class="form-control" rows="3" required></textarea>
+                                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                                </form>
+                            </div>
+
+                            <div class="card card-body shadow-sm mt-3">
+                                <div class="detail-area">
+                                    <h6 class="user-name mb-1">
+                                        User One
+                                        <small class="ms-3 text-primary">Comment On : 3-8-22</small>
+                                    </h6>
+                                    <p class="user-comment mb-1">
+                                        Nice blog for the tech trip
+                                        please update more and more daily 
+                                    </p>
+                                    <a href="" class="btn btn-primary mt-3">Edit</a>
+                                    <a href="" class="btn btn-danger mt-3">Delete</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -41,12 +68,12 @@
                                 <h4>Latest Posts</h4>
                             </div>
                             <div class="card-body">
-                                
-                                @foreach ($latest_post  as $latest_post_item)
-                                    
-                                <a href="{{url('categories/'.$latest_post_item->category->slug.'/'. $latest_post_item->slug)}}" class="text-decoration-none">
-                                    <h6> > {{$latest_post_item->name}}</h6>
-                                </a>
+
+                                @foreach ($latest_post as $latest_post_item)
+                                    <a href="{{ url('categories/' . $latest_post_item->category->slug . '/' . $latest_post_item->slug) }}"
+                                        class="text-decoration-none">
+                                        <h6> > {{ $latest_post_item->name }}</h6>
+                                    </a>
                                 @endforeach
                             </div>
                         </div>
@@ -81,4 +108,3 @@
     @include('layouts.include.fronted-footer')
 
 @endsection
-

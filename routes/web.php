@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Frontend\CommentController;
 use App\Http\Controllers\Admin\DashboardController;
 
 
@@ -22,6 +23,7 @@ Route::get('/logout',[App\Http\Controllers\Frontend\FrontendController::class, '
 Route::get('categories/{category_slug}',[App\Http\Controllers\Frontend\FrontendController::class, 'viewCategoryPost']);
 Route::get('/post/{id}',[App\Http\Controllers\Frontend\FrontendController::class, 'show']);
 
+Route::post('comments',[App\Http\Controllers\Frontend\CommentController::class, 'store'])->name('comments');
 
 Route::get('/navbar_pages/articles', [FrontendController::class, 'articles'])->name('navbar_pages.articles');
 Route::get('/navbar_pages/blog', [FrontendController::class, 'blog'])->name('navbar_pages.blog');
@@ -30,6 +32,7 @@ Route::get('/navbar_pages/aboutus', [FrontendController::class, 'aboutus'])->nam
 Route::get('/navbar_pages/services', [FrontendController::class, 'services'])->name('navbar_pages.services');
 
 Route::get('categories/{category_slug}/{post_slug}',[App\Http\Controllers\Frontend\FrontendController::class, 'viewPost']);
+
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     Route::get('/dashboard',[\App\Http\Controllers\Admin\DashboardController::class,'index'])->name('admin.dashboard');
     Route::get('category',[\App\Http\Controllers\Admin\CategoryController::class,'index'])->name('admin.category');
