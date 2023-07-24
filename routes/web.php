@@ -7,7 +7,6 @@ use App\Http\Controllers\Frontend\CommentController;
 use App\Http\Controllers\Admin\DashboardController;
 
 
-
 // Route::get('/', function () {
 //     return view('auth.login');
 // });

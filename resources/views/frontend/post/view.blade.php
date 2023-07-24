@@ -5,7 +5,7 @@
 
 @section('content')
 
-    @auth
+    {{-- @auth --}}
         <div class="py-5">
             <div class="container">
                 <div class="row">
@@ -35,30 +35,43 @@
                         </div>
 
                         <div class="comment-area mt-4">
+                            @if (session('message'))
+                                <h6 class="alert alert-warning mb-3">{{ session('message') }}</h6>
+                            @endif
                             <div class="card card-body">
                                 <h5 style="color:crimson; font-weight:bold;">Leave a comment</h5>
-                                <form action="{{url('comments')}}" method="POST">
+                                <form action="{{ url('comments') }}" method="POST">
                                     @csrf
                                     <input type="hidden" name="post_slug" value="{{ $post->slug }}">
-                                    <textarea name="cooment_body" class="form-control" rows="3" required></textarea>
+                                    <textarea name="comment_body" class="form-control" rows="3" required></textarea>
                                     <button type="submit" class="btn btn-primary mt-3">Submit</button>
                                 </form>
                             </div>
 
-                            <div class="card card-body shadow-sm mt-3">
-                                <div class="detail-area">
-                                    <h6 class="user-name mb-1">
-                                        User One
-                                        <small class="ms-3 text-primary">Comment On : 3-8-22</small>
-                                    </h6>
-                                    <p class="user-comment mb-1">
-                                        Nice blog for the tech trip
-                                        please update more and more daily 
-                                    </p>
-                                    <a href="" class="btn btn-primary mt-3">Edit</a>
-                                    <a href="" class="btn btn-danger mt-3">Delete</a>
+                            @forelse ($post->comments as $comment)
+                                <div class="card card-body shadow-sm mt-3">
+                                    <div class="detail-area">
+                                        <h6 class="user-name mb-1">
+                                            @if ($comment->user)
+                                                <b>Commented By :</b> {{ $comment->user->name }}
+                                            @endif
+                                            <small class="ms-3 text-secondary"><b>Comment On :</b> {{ $comment->created_at->format('d-m-Y') }}</small>
+                                        </h6>
+                                        <p class="user-comment mb-1">
+                                            {!! $comment->comment_body !!}
+                                        </p>
+                                    </div>
+
+                                    @if (Auth::check() && Auth::id() == $comment->user_id)                               
+                                    <div>
+                                        <a href="" class="btn btn-primary mt-3">Edit</a>
+                                        <button type="button" value="{{$comment->id}}" class="deleteComment btn btn-danger mt-3" >Delete</button>
+                                    </div>
+                                    @endif
                                 </div>
-                            </div>
+                            @empty
+                                <h6 style="color: rgb(85, 85, 85)">No any comments !</h6>
+                            @endforelse
                         </div>
                     </div>
 
@@ -68,7 +81,6 @@
                                 <h4>Latest Posts</h4>
                             </div>
                             <div class="card-body">
-
                                 @foreach ($latest_post as $latest_post_item)
                                     <a href="{{ url('categories/' . $latest_post_item->category->slug . '/' . $latest_post_item->slug) }}"
                                         class="text-decoration-none">
@@ -81,7 +93,7 @@
                 </div>
             </div>
         </div>
-    @else
+    {{-- @else
         <div class="py-5">
             <div class="container">
                 <div class="row justify-content-center">
@@ -104,7 +116,18 @@
                 </div>
             </div>
         </div>
-    @endauth
+    @endauth --}}
     @include('layouts.include.fronted-footer')
 
+@endsection
+
+@section('scripts')
+
+        <script>
+            $(document).ready(function () {
+                $(document).on('click','.deleteComment' function () {
+                    
+                });
+            });
+        </script>
 @endsection

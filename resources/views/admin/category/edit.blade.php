@@ -33,7 +33,7 @@
                 </div>
                 <div class="mb-3">
                     <b><label for="">Slug</label></b>
-                    <input type="text" name="slug" class="form-control" value={{$category->slug}}>
+                    <input type="text" name="slug" class="form-control" value="{{$category->slug}}">
                 </div>
                 <div class="mb-3">
                     <b><label for="">Description</label></b>
@@ -48,7 +48,7 @@
                 <h6>SEO TAG</h6>
                 <div class="mb-3">
                     <b><label for="">Meta Title</label></b>
-                    <input type="text" name="meta_title" class="form-control" value={{$category->meta_title}}>
+                    <input type="text" name="meta_title" class="form-control" value="{{$category->meta_title}}">
                 </div>
                 <div class="mb-3">
                     <b><label for="">Meta Description</label></b>

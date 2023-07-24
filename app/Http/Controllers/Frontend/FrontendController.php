@@ -50,7 +50,6 @@ class FrontendController extends Controller
 
     public function show($id)
     {
-        // Check if the user is authenticated
         if (auth()->check()) {
             // User is logged in, retrieve the post
             $post = Post::findOrFail($id);
