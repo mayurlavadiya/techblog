@@ -65,7 +65,7 @@
                                     @if (Auth::check() && Auth::id() == $comment->user_id)                               
                                     <div>
                                         <a href="" class="btn btn-primary mt-3">Edit</a>
-                                        <button type="button" value="{{$comment->id}}" class="deleteComment btn btn-danger mt-3" >Delete</button>
+                                        <button type="button" value="{{$comment->id}}" class="deleteComment btn btn-danger mt-3">Delete</button>
                                     </div>
                                     @endif
                                 </div>
@@ -123,11 +123,31 @@
 
 @section('scripts')
 
-        <script>
-            $(document).ready(function () {
-                $(document).on('click','.deleteComment' function () {
-                    
+<script>
+    $(document).ready(function () {
+        $(document).on('click', '.deleteComment', function () {
+            var commentId = $(this).val();
+            if (confirm("Are you sure you want to delete this comment?")) {
+                // Send an AJAX request to the server to delete the comment
+                $.ajax({
+                    url: "{{ url('comments') }}/" + commentId,
+                    type: "DELETE",
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        "comment_id": commentId
+                    },
+                    success: function (response) {
+                        // If the comment is deleted successfully, remove it from the DOM
+                        $("#comment-" + commentId).remove();
+                        alert("Comment deleted successfully!");
+                    },
+                    error: function (xhr) {
+                        // Handle errors if the comment deletion fails
+                        alert("Failed to delete comment. Please try again later.");
+                    }
                 });
-            });
-        </script>
+            }
+        });
+    });
+</script>
 @endsection

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-<div class="py-5 bg-dark text-white">
+<div class="py-4 bg-dark text-white">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
