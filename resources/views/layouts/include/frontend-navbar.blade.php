@@ -26,7 +26,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('navbar_pages/blog') }}">Blogs</a>
+                    <a class="nav-link" href="{{ url('/') }}">Blogs</a>
                 </li>
 
                 <li class="nav-item dropdown">

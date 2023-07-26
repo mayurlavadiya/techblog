@@ -15,8 +15,10 @@
                 </a>
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link {{ Request::is('admin/add-category') ? 'active':''}}" href="{{ url('admin/add-category')}}">Add Category</a>
-                        <a class="nav-link {{ Request::is('admin/category') ? 'active':''}}" href="{{ url('admin/category')}}">View Category</a>
+                        <a class="nav-link {{ Request::is('admin/add-category') ? 'active':''}}" href="{{ url('admin/add-category')}}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-plus"></i></div>Add Category</a>
+                        <a class="nav-link {{ Request::is('admin/category') ? 'active':''}}" href="{{ url('admin/category')}}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-eye"></i></div>View Category</a>
                     </nav>
                 </div>
                 
@@ -27,8 +29,10 @@
                 </a>
                 <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                        <a class="nav-link {{ Request::is('admin/add-post') ? 'active':''}}" href="{{ url('admin/add-post')}}">Add Post</a>
-                        <a class="nav-link {{ Request::is('admin/posts') ? 'active':''}}" href="{{ url('admin/posts')}}">View Post</a>
+                        <a class="nav-link {{ Request::is('admin/add-post') ? 'active':''}}" href="{{ url('admin/add-post')}}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-plus"></i></div>Add Post</a>
+                        <a class="nav-link {{ Request::is('admin/posts') ? 'active':''}}" href="{{ url('admin/posts')}}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-eye"></i></div>View Post</a>
                         
                     </nav>
                 </div>
@@ -40,12 +44,12 @@
                 </a>
 
                 <a class="nav-link" href="charts.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                    Charts
+                    <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                    Roles
                 </a>
                 <a class="nav-link" href="tables.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    Tables
+                    <div class="sb-nav-link-icon"><i class="fas fa-unlock-alt"></i></div>
+                    Permission
                 </a>
             </div>
         </div>

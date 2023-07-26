@@ -148,7 +148,8 @@
                                 class="text-decoration-none">
                                 <h5 class="text-dark mb-0">{{ $latest_post_item->name }}</h5>
                             </a>
-                            <h6><b>Posted On:</b> {{ $latest_post_item->created_at->format('d-m-Y') }}</h6>
+                            <h6 class="mt-2"><b>Posted On:</b> {{ $latest_post_item->created_at->format('d-m-Y') }}
+                            <span class="ms-5"><b>Posted By:</b> {{ $latest_post_item->user?->name}}</span></h6>
                         </div>
                     @endforeach
                 </div>
