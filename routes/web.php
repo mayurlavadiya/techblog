@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Frontend\FrontendController;
-use App\Http\Controllers\Frontend\CommentController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Frontend\CommentController;
+
 
 
 // Route::get('/', function () {
@@ -23,6 +24,8 @@ Route::get('categories/{category_slug}',[App\Http\Controllers\Frontend\FrontendC
 Route::get('/post/{id}',[App\Http\Controllers\Frontend\FrontendController::class, 'show']);
 
 Route::post('comments',[App\Http\Controllers\Frontend\CommentController::class, 'store'])->name('comments');
+Route::post('delete-comment',[App\Http\Controllers\Frontend\CommentController::class, 'destroy']);
+
 
 Route::get('/navbar_pages/articles', [FrontendController::class, 'articles'])->name('navbar_pages.articles');
 Route::get('/navbar_pages/blog', [FrontendController::class, 'blog'])->name('navbar_pages.blog');
