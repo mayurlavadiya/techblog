@@ -1,66 +1,57 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![134700053_padded_logo](https://github.com/mayurlavadiya/techblog/assets/100776003/aae4470c-abcc-4d40-9381-51c463340a3c)
 
-## About Laravel
+# Techblog - Blog Website
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The Techblog website is a platform dedicated to providing insightful and up-to-date content on various technology topics.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+From product reviews to industry news and tech tutorials, the website offers engaging articles for both tech enthusiasts and beginners. 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+It aims to build a community of like-minded individuals who share a passion for innovation and empower readers with the knowledge to embrace and make the most of technology.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# Tech Blog Website Features:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+**Admin Dashboard:**
+        
+* Add, edit, and delete users with ease.
+* Manage blog post categories efficiently.
+* Create, modify, and remove blog posts effortlessly.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**User Dashboard:**
 
-## Laravel Sponsors
+* Conveniently add and publish blog posts.
+* Easily view and access created blog posts.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+**Overall Website:**
 
-### Premium Partners
+* User-friendly and intuitive layout for seamless navigation.
+* Secure user authentication and authorization system.
+* Responsive design for optimal viewing on various devices.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+## Screenshots
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![Techblog-Home](https://github.com/mayurlavadiya/techblog/assets/100776003/fa63b654-f8f4-4554-afc4-206d9c581c6c)
 
-## Code of Conduct
+![Techblog-Admin](https://github.com/mayurlavadiya/techblog/assets/100776003/3669fff0-1f1e-4b2f-8435-dae138b42300)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## 🚀 About Me
+Hi 👋, I'm a Dynamic Web Developer Looking For New Opportunities To Challenge Myself👍. Fav Languages : PHP, HTML. CSS, JAVACRIPT, MySQL.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+🔭 I’m currently working on Something Cool!
 
-## License
+🌱 I’m currently learning PHP, LARAVEL, REACTJS.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+👯 I’m looking to collaborate on cool project.
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://mayurlavadiya.dorik.io/)
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://in.linkedin.com/in/mayurlavadiya)
+
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/i/flow/login?redirect_after_login=%2FMayur_Lavadiya1)
+
+[![instagram](https://img.shields.io/badge/instagram-405DE6?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_mayur.lavadiya__/)
