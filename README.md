@@ -3,7 +3,7 @@
 
 # Techblog - Blog Website
 
-The Techblog website is a platform dedicated to providing insightful and up-to-date content on various technology topics.
+The Techblog website is a platform dedicated to providing insightful and up-to-date content on various latest technology topics.
 
 From product reviews to industry news and tech tutorials, the website offers engaging articles for both tech enthusiasts and beginners. 
 
