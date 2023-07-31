@@ -142,7 +142,7 @@
                     var comment_id = thisClicked.val();
 
                     $.ajax({
-                        type: "POST",
+                        type: "DELETE",
                         url: "/delete-comment",
                         data: {
                             'comment_id': comment_id
