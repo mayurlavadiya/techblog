@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Frontend\CommentController;
 use App\Http\Controllers\Admin\DashboardController;
-
+use App\Http\Controllers\Admin\SettingController;
 
 
 // Route::get('/', function () {
@@ -54,6 +54,9 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     Route::get('users',[\App\Http\Controllers\Admin\UserController::class,'index'])->name('admin.users.index');
     Route::get('users/edit/{user_id}',[\App\Http\Controllers\Admin\UserController::class,'edit'])->name('admin.edit-users');
     Route::put('update-user/{user_id}', [\App\Http\Controllers\Admin\UserController::class, 'update'])->name('admin.update-user');
+    
+    Route::get('/settings', [App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin.settings');
+    Route::post('settings', [\App\Http\Controllers\Admin\SettingController::class, 'saveddata']);
 
 });
 

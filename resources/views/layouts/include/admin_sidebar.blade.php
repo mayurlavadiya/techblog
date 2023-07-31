@@ -51,6 +51,10 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-unlock-alt"></i></div>
                     Permission
                 </a>
+                <a class="nav-link" href="{{url('admin/settings')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>
+                    Settings
+                </a>
             </div>
         </div>
         <div class="sb-sidenav-footer">

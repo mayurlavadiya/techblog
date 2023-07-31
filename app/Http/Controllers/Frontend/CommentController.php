@@ -45,13 +45,20 @@ class CommentController extends Controller
             $comment = Comments::where('id',$request->comment_id)
                 ->where('user_id',Auth::user()->id)
                 ->first();
-                
-            $comment->delete();
 
-            return response()->json([
-                'status' => 200,
-                'message' => 'Comment deleted successfully !'
-            ]);
+            if($comment){
+                $comment->delete(); 
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'Comment deleted successfully !'
+                ]);
+            }    
+            else{
+                return response()->json([
+                    'status' => 500,
+                    'message' => 'Something went wrong !'
+                ]);
+            }
         }
         else
         {
