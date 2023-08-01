@@ -43,15 +43,15 @@
                     Users
                 </a>
 
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="#">
                     <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                     Roles
                 </a>
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="#">
                     <div class="sb-nav-link-icon"><i class="fas fa-unlock-alt"></i></div>
                     Permission
                 </a>
-                <a class="nav-link" href="{{url('admin/settings')}}">
+                    <a class="nav-link" href="{{ url('admin/settings')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>
                     Settings
                 </a>

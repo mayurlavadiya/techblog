@@ -13,7 +13,7 @@ class Settings extends Model
 
     protected $fillable = [
         'website_name',
-        'logo',
+        'logo', 
         'favicon',
         'description',
         'meta_title',

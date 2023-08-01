@@ -13,10 +13,11 @@ class SettingController extends Controller
 {
     public function index()
     {
-        return view('admin.settings.index');
+        $setting = Settings::find(1);
+        return view('admin.setting.index', compact('setting'));
     }
 
-    public function saveddata(Request $request)
+    public function savedata(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'website_name' => 'required|max:255',
@@ -24,8 +25,8 @@ class SettingController extends Controller
             'website_favicon' => 'nullable',
             'description' => 'nullable',
             'meta_title' => 'required|max:255',
-            'meta_keyword' => 'nullable',
-            'meta_description' => 'nullable',
+            'meta_keyword' => 'required|max:255',
+            'meta_description' => 'required|max:255',
         ]);
 
         if ($validator->fails()) {
