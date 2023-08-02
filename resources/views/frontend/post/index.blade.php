@@ -8,7 +8,7 @@
 
 <div class="py-5">
     <div class="container">
-        <div class="row">
+        <div class="row">   
             <div class="col-md-12">
                 <a class="btn btn-primary mb-4" href="{{ url()->previous() }}">Back</a>
 

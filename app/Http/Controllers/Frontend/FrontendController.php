@@ -6,15 +6,17 @@ use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Settings;
 use Illuminate\Support\Facades\Auth;
 
 class FrontendController extends Controller
 {
     public function index(){
+        $setting = Settings::find(1);
         $posts = Post::all(); 
         $all_categories = Category::where('status','1')->get();
         $latest_post = Post ::where('status','1')->orderBy('created_at','DESC')->get()->take(5);
-        return view('frontend.index',compact('posts', 'all_categories','latest_post'));
+        return view('frontend.index',compact('posts', 'all_categories','latest_post','setting'));
     }
 
     // view fronted category page

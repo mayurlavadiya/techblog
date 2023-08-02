@@ -18,10 +18,10 @@
                 <div><a href="{{ route('home') }}" class="text-white text-decoration-none">Home</a></div>
                 <div><a href="{{ route('navbar_pages.aboutus') }}" class="text-white text-decoration-none">About Us</a>
                 </div>
-                <div><a href="{{ route('navbar_pages.contactus') }}" class="text-white text-decoration-none">Contact
-                        Us</a></div>
                 <div><a href="{{ route('navbar_pages.services') }}" class="text-white text-decoration-none">Services</a>
                 </div>
+                <div><a href="{{ route('navbar_pages.contactus') }}" class="text-white text-decoration-none">Contact
+                        Us</a></div>
             </div>
 
             <div class="col-md-3">

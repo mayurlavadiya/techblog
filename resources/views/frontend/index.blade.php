@@ -1,6 +1,8 @@
 @section('title', 'Techblog - Home')
-@extends('layouts.app')
+@section('meta_description', "$setting->meta_description")
+@section('meta_keyword', "$setting->meta_keyword")
 
+@extends('layouts.app')
 
 @section('content')
 

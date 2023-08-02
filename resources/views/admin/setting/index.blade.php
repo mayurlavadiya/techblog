@@ -28,11 +28,17 @@
                         <div class="mb-3">
                             <b><label>Website Logo</label></b>
                             <input type="file" name="website_logo" class="form-control" required/>
+                            @if($setting)
+                                <img src="{{ asset('upload/settings/'.$setting->logo) }}" width="20%" height="25%" alt="">
+                            @endif
                         </div>
 
                         <div class="mb-3">
                             <b><label>Website Favicon</label></b>
                             <input type="file" name="website_favicon" class="form-control" />
+                            @if($setting)
+                            <img src="{{ asset('upload/settings/'.$setting->favicon)}}" width="100px" height="100px" alt="">
+                        @endif
                         </div>
 
                         <div class="mb-3">

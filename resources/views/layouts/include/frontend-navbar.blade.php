@@ -2,9 +2,12 @@
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <div class="container">
 
+        @php
+            $setting = App\Models\Settings::find(1);
+        @endphp
         <!-- Navbar Brand -->
         <a class="navbar-brand ps-3" href="{{ url('/') }}">
-            <img src="{{ asset('assets/images/logo/Techblog (3).svg') }}" width="150px" alt="Techblog Logo">
+            <img src="{{ asset('upload/settings/'.$setting->logo) }}" width="150px" alt="Techblog Logo">
         </a>
 
         <!-- Navbar Toggler -->
@@ -25,9 +28,9 @@
                     <a class="nav-link" href="{{ url('navbar_pages/aboutus') }}">About Us</a>
                 </li>
 
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="{{ url('/') }}">Blogs</a>
-                </li>
+                </li> --}}
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
