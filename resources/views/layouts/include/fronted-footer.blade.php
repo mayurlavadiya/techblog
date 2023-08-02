@@ -9,7 +9,9 @@
                 <div class="underline mt-2" style="width: 100px"></div>
                 <p>TechBlog is a leading tech-focused website that covers the latest trends, news, and developments in
                     the world of technology.</p>
-                <p>Contact us: <a href="mailto:techblog@gmail.com" class="text-danger">techblog@gmail.com</a></p>
+                <p>Email: <a href="mailto:techblog@gmail.com" class="text-danger">techblog@gmail.com</a></p>
+                <p>Contact Us: <a href="#" class="text-danger" style="text-decoration: none">91 9510399991</a></p>
+
             </div>
 
             <div class="col-md-3">

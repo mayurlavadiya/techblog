@@ -27,7 +27,7 @@
 
                         <div class="mb-3">
                             <b><label>Website Logo</label></b>
-                            <input type="file" name="website_logo" class="form-control" required/>
+                            <input type="file" name="website_logo" class="form-control"/>
                             @if($setting)
                                 <img src="{{ asset('upload/settings/'.$setting->logo) }}" width="20%" height="25%" alt="">
                             @endif

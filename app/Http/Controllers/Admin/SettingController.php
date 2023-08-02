@@ -21,7 +21,7 @@ class SettingController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'website_name' => 'required|max:255',
-            'website_logo' => 'required',
+            'website_logo' => 'nullable',
             'website_favicon' => 'nullable',
             'description' => 'nullable',
             'meta_title' => 'required|max:255',
