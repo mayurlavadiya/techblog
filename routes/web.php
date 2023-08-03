@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Frontend\CommentController;
+// use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Frontend\FrontendController;
 
 
@@ -60,6 +61,6 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('users/edit/{user_id}', [\App\Http\Controllers\Admin\UserController::class, 'edit'])->name('admin.edit-users');
     Route::put('update-user/{user_id}', [\App\Http\Controllers\Admin\UserController::class, 'update'])->name('admin.update-user');
 
-    Route::get('settings', [App\Http\Controllers\Admin\SettingController::class, 'index']);
-    Route::post('settings', [App\Http\Controllers\Admin\SettingController::class, 'savedata']);
+    Route::get('settings', [\App\Http\Controllers\Admin\SettingController::class, 'index']);
+    Route::post('settings', [\App\Http\Controllers\Admin\SettingController::class, 'savedata']);
 });
