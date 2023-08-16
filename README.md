@@ -52,4 +52,4 @@ Hi 👋, I'm a Dynamic Web Developer Looking For New Opportunities To Challenge 
 
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/i/flow/login?redirect_after_login=%2FMayur_Lavadiya1)
 
-[![instagram](https://img.shields.io/badge/instagram-405DE6?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_mayur.lavadiya__/)
+[![instagram](https://img.shields.io/badge/instagram-405DE6?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/mayur_lavadiya_)
